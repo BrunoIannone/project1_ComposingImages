@@ -11,16 +11,8 @@ function composite(bgImg, fgImg, fgOpac, fgPos) {
 
             if (x >= bgImg.width || y >= bgImg.height || (x < 0 && y >= 0)) { // Rough border check for ignoring foreground pixels outside the background image.
                 
-                var bgIndex = (y) * (bgImg.width) * 4 + (x) * 4; // computation of background index
-
-                //Keep the background pixels unchanged
-                bgImg.data[bgIndex + 0] = bgImg.data[bgIndex];
-                bgImg.data[bgIndex + 1] = bgImg.data[bgIndex + 1];
-                bgImg.data[bgIndex + 2] = bgImg.data[bgIndex + 2];
-                bgImg.data[bgIndex + 3] = bgImg.data[bgIndex + 3];
                 
-                
-
+                continue
             }
             else {
                 
